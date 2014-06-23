@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [[ $1 == "install" ]]; then #same files, just in reverse
+    #INSTALLING MODE
+    echo "Installing keyboard shortcuts, openbox menu, default apps"
+    cp ./desktops/openbox/. ~/.config/openbox/ -R
+    echo "Installing conky files"
+    cp ./desktops/conky/. ~/.conky/ -R
+    cp ./desktops/conkyrc ~/.conkyrc
+    sudo cp ./desktops/conky_start /bin/conky_start && sudo chmod +x /bin/conky_start
+else
+    # COPYING MODE
+    # Keyboard shortcuts, openbox menu, default apps
+    cp ~/.config/openbox/. ./desktops/openbox/ -R
+
+    # Conky startup and scripts
+    cp /bin/conky_start ./desktops/conky/conky_start
+    cp ~/.conkyrc ./desktops/conkyrc
+    cp ~/.conky/. ./desktops/conky/ -R
+fi

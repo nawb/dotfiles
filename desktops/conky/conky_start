@@ -1,0 +1,7 @@
+#!/bin/bash
+#Conky start up file to start multiple sessions of conky.
+
+conky -c ~/.conky/.conkyrc_sys &
+conky -c ~/.conky/.conkyrc_disk &
+conky -c ~/.conky/.conkyrc_net
+#conky -c ~/.conky/.conkyrc_weather
