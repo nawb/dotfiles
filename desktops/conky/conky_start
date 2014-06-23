@@ -1,5 +1,7 @@
 #!/bin/bash
+
 #Conky start up file to start multiple sessions of conky.
+#keep this file in /bin
 
 conky -c ~/.conky/.conkyrc_sys &
 conky -c ~/.conky/.conkyrc_disk &
