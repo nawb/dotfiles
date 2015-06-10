@@ -91,8 +91,10 @@ fi
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -lA'
+alias lt='ls -lt'
 alias l='ls -CF'
 alias aa='sudo apt-get'
+alias diffs='diff --side-by-side --suppress-common-lines'
 alias exit='bash ~/dotfiles/bash/seeyouspacecowboy.sh; exit'
 
 # Alias definitions.
