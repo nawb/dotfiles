@@ -116,3 +116,14 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+# track directors for z in folder ~/.z/_zdb
+# github.com/rupa/z
+Z_DIR=$HOME/.z
+_Z_DATA=$Z_DIR/_zdb
+if [[ ! -d $Z_DIR ]]; then
+  mkdir $Z_DIR
+  git clone https://github.com/rupa/z $Z_DIR > /dev/null 2>&1
+fi
+. $Z_DIR/z.sh
