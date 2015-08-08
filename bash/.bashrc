@@ -117,6 +117,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# easier coloring
+source ~/dotfiles/bash/shml.sh
 
 # track directors for z in folder ~/.z/_zdb
 # github.com/rupa/z
