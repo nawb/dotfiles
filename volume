@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## CONTROL THE VOLUME VIA SSH
+## First made when I was sitting in my bedroom and the TV was too loud
+
+if [[ $# == 0 ]]; then
+    echo "Specify volume change."
+    echo "Usage: volume {lower|higher}"
+    exit -1
+fi
+
+if [[ $1 == "lower" ]]; then
+    pactl set-sink-volume 0 -- -10% 
+fi
+if [[ $1 == "higher" ]]; then
+    pactl set-sink-volume 0 -- +10% 
+fi
