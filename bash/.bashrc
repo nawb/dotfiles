@@ -74,7 +74,12 @@ esac
 
 #CUSTOMIZED COLOR PROMPT:
 PROMPT_DIRTRIM=2
-PS1="\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]"
+nameCLR="\[\e[0;32m\]" #d. green
+tildCLR="\[\e[1;34m\]" #l. blue
+dollCLR="\[\e[1;32m\]" #l. yellow
+promptCLR="\[\e[1;37m\]" #white
+escCLR="\[\e[m\]" #escape
+PS1="$nameCLR\u$escCLR $tildCLR\w$escCLR $dollCLR\$$escCLR $promptCLR"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -94,8 +99,9 @@ alias la='ls -lA'
 alias lt='ls -lt'
 alias l='ls -CF'
 alias aa='sudo apt-get'
+alias s='sudo'
 alias diffs='diff --side-by-side --suppress-common-lines'
-alias exit='bash ~/dotfiles/bash/seeyouspacecowboy.sh; exit'
+#alias exit='bash ~/dotfiles/bash/seeyouspacecowboy.sh; exit'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
